@@ -1,0 +1,9 @@
+digraph ast_graph {
+  graph [ dpi = 200 ];
+<%- node_labels.each do |idx, label| %>
+  <%= %Q(#{idx} [label="#{label}"];); -%>
+<% end %>
+<%- graph_edges.each do |edge| %>
+  <%= %Q(#{edge[:from]} -> #{edge[:to]}); -%>
+<% end %>
+}

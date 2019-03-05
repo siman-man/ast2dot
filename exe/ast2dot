@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'ast2dot'
+require 'optparse'
+
+opt_parse = OptionParser.new do |opt|
+  opt.banner = 'Usage: ast2dot ruby_programfile'
+  opt.parse!(ARGV)
+end
+
+if ARGV.first.nil?
+  puts opt_parse
+else
+  puts AST2Dot.render(File.read(ARGV.first))
+end

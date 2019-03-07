@@ -9,6 +9,13 @@ RSpec.describe AST2Dot do
         digraph ast_graph {
           graph [ dpi = 200 ];
 
+          node [
+            fontsize = 14,
+            shape = box,
+            style = "bold,rounded",
+            margin = 0.2
+          ];
+
           1 [label="LIT"];
           2 [label="LIT"];
           3 [label="ARRAY"];

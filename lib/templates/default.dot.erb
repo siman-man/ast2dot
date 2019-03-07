@@ -1,5 +1,12 @@
 digraph ast_graph {
   graph [ dpi = 200 ];
+
+  node [
+    fontsize = 14,
+    shape = box,
+    style = "bold,rounded",
+    margin = 0.2
+  ];
 <%- node_labels.each do |idx, label| %>
   <%= %Q(#{idx} [label="#{label}"];); -%>
 <% end %>

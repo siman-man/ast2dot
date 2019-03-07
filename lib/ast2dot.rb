@@ -1,4 +1,5 @@
 require 'ast2dot/version'
+require 'ast2dot/node_label'
 require 'erb'
 
 class AST2Dot
